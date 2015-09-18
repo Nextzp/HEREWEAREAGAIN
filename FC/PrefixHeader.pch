@@ -1,0 +1,66 @@
+//
+//  PrefixHeader.pch
+//  FC
+//
+//  Created by ZhangPeng on 15/9/9.
+//  Copyright (c) 2015年 Lishan. All rights reserved.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+#import <objc/runtime.h>
+#import "UILabel+Common.h"
+#import "UIView+Frame.h"
+#import "UIView+Common.h"
+#import <BlocksKit/BlocksKit.h>
+#import <BlocksKit/BlocksKit+UIKit.h>
+#import "NSObject+Common.h"
+#import "UIColor+expanded.h"
+#import "NSObject+ObjectMap.h"
+#import "FC_NetAPIManager.h"
+#import "UIImageView+WebCache.h"
+#import "UITapImageView.h"
+#import "UITTTAttributedLabel.h"
+
+#endif
+
+//常用
+
+#define WeakSelfType __weak __typeof(&*self)
+
+#define DebugLog(s, ...) NSLog(@"%s(%d): %@", __FUNCTION__, __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__])
+#define kTipAlert(_S_, ...)     [[[UIAlertView alloc] initWithTitle:@"提示" message:[NSString stringWithFormat:(_S_), ##__VA_ARGS__] delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil] show]
+
+#define kKeyWindow [UIApplication sharedApplication].keyWindow
+
+#define kAppMainBackgroundColor [UIColor colorWithRed:240.0 / 255.0f green:240.0 / 255.0f blue:240.0 / 255.0f alpha:1.0f]
+#define RGB(r, g, b)            [UIColor colorWithRed:r / 255.0f green:g / 255.0f blue:b / 255.0f alpha:1.0f]
+#define RGBA(r, g, b, a)        [UIColor colorWithRed:r / 255.0f green:g / 255.0f blue:b / 255.0f alpha:a]
+#define RGBHEX(hex)        [UIColor colorWithRed:((float)((hex & 0xFF0000) >> 16))/255.0 green:((float)((hex & 0xFF00) >> 8))/255.0 blue:((float)(hex & 0xFF))/255.0 alpha:1.0]
+
+#define kDevice_Is_iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+#define kDevice_Is_iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+#define kDevice_Is_iPhone6Plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define kScreen_Bounds [UIScreen mainScreen].bounds
+#define kScreen_Height [UIScreen mainScreen].bounds.size.height
+#define kScreen_Width [UIScreen mainScreen].bounds.size.width
+#define kPaddingLeftWidth 15.0
+#define kLoginPaddingLeftWidth 18.0
+#define kMySegmentControl_Height 44.0
+#define kMySegmentControlIcon_Height 70.0
+#define kLabelSmallFont 14.0
+#define kLabelBigFont 15.0
+
+#define kPlaceholderLogoRoundView(_view_) [UIImage imageNamed:[NSString stringWithFormat:@"placeholder_monkey_round_%.0f", CGRectGetWidth(_view_.frame)]]
+
+//链接颜色
+#define kLinkAttributes     @{(__bridge NSString *)kCTUnderlineStyleAttributeName : [NSNumber numberWithBool:NO],(NSString *)kCTForegroundColorAttributeName : (__bridge id)[UIColor colorWithHexString:@"0x3bbd79"].CGColor}
+#define kLinkAttributesActive       @{(NSString *)kCTUnderlineStyleAttributeName : [NSNumber numberWithBool:NO],(NSString *)kCTForegroundColorAttributeName : (__bridge id)[[UIColor colorWithHexString:@"0x1b9d59"] CGColor]}
