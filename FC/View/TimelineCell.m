@@ -22,7 +22,6 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        WeakSelfType blockSelf = self;
         if (!self.headImageView) {
             _headImageView = ({
                 UITapImageView *imgView = [[UITapImageView alloc] initWithFrame:CGRectMake(kPaddingLeftWidth, 5, 35, 35)];
@@ -32,14 +31,16 @@
             });
         }
         if (!self.nameLabel) {
-            _nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.headImageView.right+kPaddingLeftWidth, 5, kScreen_Width, 20)];
+            _nameLabel = [UILabel labelWithFrame:CGRectMake(self.headImageView.right+kPaddingLeftWidth, 5, kScreen_Width, 20) font:[UIFont systemFontOfSize:kLabelBigFont] textColor:[UIColor darkGrayColor] textAlignment:NSTextAlignmentLeft];
             _nameLabel.userInteractionEnabled = YES;
-            [_nameLabel setTextColor:[UIColor redColor]];
-            [_nameLabel setFont:[UIFont systemFontOfSize:kLabelBigFont]];
             [_nameLabel bk_whenTapped:^{
                 
             }];
             [self.contentView addSubview:self.nameLabel];
+        }
+        if (_timeLabel) {
+            _timeLabel = [UILabel labelWithFrame:CGRectMake(kScreen_Width-100, _nameLabel.top, 95, 20) font:[UIFont systemFontOfSize:kLabelSmallFont] textColor:[UIColor lightGrayColor] textAlignment:NSTextAlignmentRight];
+            [self.contentView addSubview:_timeLabel];
         }
         if (!self.contentLabel) {
             self.contentLabel = [[UITTTAttributedLabel alloc] initWithFrame:CGRectMake(self.nameLabel.left, self.nameLabel.bottom, kScreen_Width-self.nameLabel.left-5, 20)];
