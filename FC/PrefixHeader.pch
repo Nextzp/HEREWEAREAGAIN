@@ -19,6 +19,7 @@
 #import "UILabel+Common.h"
 #import "UIView+Frame.h"
 #import "UIView+Common.h"
+#import "NSString+Common.h"
 #import <BlocksKit/BlocksKit.h>
 #import <BlocksKit/BlocksKit+UIKit.h>
 #import "NSObject+Common.h"
@@ -28,6 +29,8 @@
 #import "UIImageView+WebCache.h"
 #import "UITapImageView.h"
 #import "UITTTAttributedLabel.h"
+#import "LocalJsonManager.h"
+#import <MJRefresh/MJRefreshNormalHeader.h>
 
 #endif
 
@@ -41,6 +44,7 @@
 #define kKeyWindow [UIApplication sharedApplication].keyWindow
 
 #define kAppMainBackgroundColor [UIColor colorWithRed:240.0 / 255.0f green:240.0 / 255.0f blue:240.0 / 255.0f alpha:1.0f]
+#define kAPPMainColorStr @"0x253f6b"
 #define RGB(r, g, b)            [UIColor colorWithRed:r / 255.0f green:g / 255.0f blue:b / 255.0f alpha:1.0f]
 #define RGBA(r, g, b, a)        [UIColor colorWithRed:r / 255.0f green:g / 255.0f blue:b / 255.0f alpha:a]
 #define RGBHEX(hex)        [UIColor colorWithRed:((float)((hex & 0xFF0000) >> 16))/255.0 green:((float)((hex & 0xFF00) >> 8))/255.0 blue:((float)(hex & 0xFF))/255.0 alpha:1.0]

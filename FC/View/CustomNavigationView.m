@@ -13,7 +13,7 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        [self setBackgroundColor:[UIColor redColor]];
+        [self setBackgroundColor:[UIColor colorWithHexString:kAPPMainColorStr]];
         [self viewInitialize];
     }
     return self;

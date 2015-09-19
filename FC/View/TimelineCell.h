@@ -8,11 +8,13 @@
 
 #define kCellIdentifier_TimelineCell @"TimelineCell"
 
-#import <UIKit/UIKit.h>
+#import "BaseCell.h"
 #import "Timeline.h"
 
-@interface TimelineCell : UITableViewCell
+@interface TimelineCell : BaseCell
 
 @property (strong, nonatomic) Timeline *timeline;
+
++ (CGFloat)cellHeightWithObj:(id)obj;
 
 @end

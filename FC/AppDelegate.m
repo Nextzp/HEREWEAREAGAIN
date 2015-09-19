@@ -22,9 +22,15 @@
     Root_TabBarController *vc = [[Root_TabBarController alloc] init];
     [self.window setRootViewController:vc];
     
+    [self setAppDefaultUI];
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+//设置app默认样式
+- (void)setAppDefaultUI{
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

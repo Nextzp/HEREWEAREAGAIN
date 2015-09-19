@@ -13,7 +13,8 @@
 @property (strong, nonatomic) NSNumber *timelineId;
 @property (strong, nonatomic) NSString *content;
 @property (strong, nonatomic) NSNumber *createTime;
-@property (strong, nonatomic) NSString *pics;
+@property (strong, nonatomic) NSDictionary *propertyArrayMap;
+@property (strong, nonatomic) NSArray  *pics;
 @property (strong, nonatomic) NSString *userIconUrl;
 @property (strong, nonatomic) NSNumber *userId;
 @property (strong, nonatomic) NSString *userNickName;

@@ -10,6 +10,7 @@
 #import "TimelineSendViewController.h"
 #import "Timeline.h"
 #import "TimelineCell.h"
+#import <MJRefresh/MJRefreshNormalHeader.h>
 
 @interface Root_FriendViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -36,20 +37,28 @@
     _myTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, kScreen_Width, kScreen_Height-64-46) style:UITableViewStylePlain];
     [_myTableView setDataSource:self];
     [_myTableView setDelegate:self];
+    [_myTableView setBackgroundColor:kAppMainBackgroundColor];
     [_myTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     [_myTableView registerClass:[TimelineCell class] forCellReuseIdentifier:kCellIdentifier_TimelineCell];
     [self.view addSubview:_myTableView];
     
-    [self requestFriendTimelineData];
+    _myTableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [self requestFriendTimelineData];
+    }];
+    
+    [_myTableView.header beginRefreshing];
 }
 
 #pragma mark - Network Request
 - (void)requestFriendTimelineData{
-    WeakSelfType blockSelf = self;
-    [[FC_NetAPIManager sharedManager] request_TimelineDataWithParams:nil andBlock:^(id data, NSError *error) {
-        [blockSelf.timelineArray addObjectsFromArray:data];
-        [blockSelf.myTableView reloadData];
-    }];
+//    WeakSelfType blockSelf = self;
+//    [[FC_NetAPIManager sharedManager] request_TimelineDataWithParams:nil andBlock:^(id data, NSError *error) {
+//        [blockSelf.timelineArray addObjectsFromArray:data];
+//        [blockSelf.myTableView reloadData];
+//    }];
+    self.timelineArray = [[LocalJsonManager sharedManager] loadLocalJsonDataWithFileName:@"friend" Type:@"json"];
+    [_myTableView.header endRefreshing];
+    [self.myTableView reloadData];
 }
 
 #pragma mark - Method
@@ -67,12 +76,13 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 50.0;
+    Timeline *timeline = [Timeline objectOfClass:NSStringFromClass([Timeline class]) fromJSON:[self.timelineArray objectAtIndex:indexPath.row]];
+    return [TimelineCell cellHeightWithObj:timeline];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     TimelineCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier_TimelineCell];
-    Timeline *model = [self.timelineArray objectAtIndex:indexPath.row];
+    Timeline *model = [Timeline objectOfClass:NSStringFromClass([Timeline class]) fromJSON:[self.timelineArray objectAtIndex:indexPath.row]];
     [cell setTimeline:model];
     return cell;
 }

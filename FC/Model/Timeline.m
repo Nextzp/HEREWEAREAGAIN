@@ -10,5 +10,13 @@
 
 @implementation Timeline
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _propertyArrayMap = [NSDictionary dictionaryWithObjectsAndKeys:@"pics",@"pics", nil];
+    }
+    return self;
+}
 
 @end

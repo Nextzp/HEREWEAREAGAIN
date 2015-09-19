@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navBarView hiddenBackButton:YES];
+    [self.navBarView.navTitleLabel setText:@"我"];
 }
 
 - (void)didReceiveMemoryWarning {
