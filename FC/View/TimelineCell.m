@@ -19,6 +19,7 @@
 @property (nonatomic, strong) UITTTAttributedLabel  *contentLabel;
 @property (nonatomic, strong) UIView                *contentBgView;
 
+
 @end
 
 @implementation TimelineCell

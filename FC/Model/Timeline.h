@@ -17,6 +17,8 @@
 @property (strong, nonatomic) NSArray  *pics;
 @property (strong, nonatomic) NSString *userIconUrl;
 @property (strong, nonatomic) NSNumber *userId;
+@property (strong, nonatomic) NSNumber *commentCount;
+@property (strong, nonatomic) NSNumber *likeCount;
 @property (strong, nonatomic) NSString *userNickName;
 
 @end
