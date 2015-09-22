@@ -45,6 +45,7 @@
 
 #define kAppMainBackgroundColor [UIColor colorWithRed:240.0 / 255.0f green:240.0 / 255.0f blue:240.0 / 255.0f alpha:1.0f]
 #define kAPPMainColorStr @"0x253f6b"
+#define kColorTableBG [UIColor colorWithHexString:@"0xfafafa"]
 #define RGB(r, g, b)            [UIColor colorWithRed:r / 255.0f green:g / 255.0f blue:b / 255.0f alpha:1.0f]
 #define RGBA(r, g, b, a)        [UIColor colorWithRed:r / 255.0f green:g / 255.0f blue:b / 255.0f alpha:a]
 #define RGBHEX(hex)        [UIColor colorWithRed:((float)((hex & 0xFF0000) >> 16))/255.0 green:((float)((hex & 0xFF00) >> 8))/255.0 blue:((float)(hex & 0xFF))/255.0 alpha:1.0]
