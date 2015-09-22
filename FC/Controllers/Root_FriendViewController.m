@@ -10,7 +10,7 @@
 #import "TimelineSendViewController.h"
 #import "Timeline.h"
 #import "TimelineCell.h"
-#import <MJRefresh/MJRefreshNormalHeader.h>
+#import <MJRefresh/MJRefresh.h>
 
 @interface Root_FriendViewController ()<UITableViewDelegate, UITableViewDataSource>
 

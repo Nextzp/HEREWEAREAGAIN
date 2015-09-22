@@ -192,11 +192,7 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (self.timeline.pics.count == 1) {
-        return CGSizeMake(300, kTimeline_ImageViewHeight);
-    }else{
-        return CGSizeMake(kTimeline_ImageViewHeight, kTimeline_ImageViewHeight);
-    }
+    return CGSizeMake(kTimeline_ImageViewHeight, kTimeline_ImageViewHeight);
 }
 
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath{
