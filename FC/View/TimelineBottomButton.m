@@ -16,7 +16,7 @@
         if (!_myImageView) {
             _myImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, frame.size.height, frame.size.height)];
             _myImageView.layer.masksToBounds = YES;
-            [_myImageView setContentMode:UIViewContentModeCenter];
+            [_myImageView setContentMode:UIViewContentModeLeft];
             [self addSubview:_myImageView];
         }
         if (!_myTextLabel) {

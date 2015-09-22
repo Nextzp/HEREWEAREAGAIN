@@ -11,7 +11,7 @@
 #import "BaseCell.h"
 #import "Timeline.h"
 
-@interface TimelineCell : BaseCell
+@interface TimelineCell : BaseCell<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (strong, nonatomic) Timeline *timeline;
 
