@@ -10,6 +10,8 @@
 #define kTimeline_ContentMaxHeight 200.0
 
 #import "TimelineCell.h"
+#import "NSDate+Common.h"
+#import "TimelineBottomButton.h"
 
 @interface TimelineCell()<TTTAttributedLabelDelegate>
 
@@ -18,6 +20,9 @@
 @property (nonatomic, strong) UILabel               *timeLabel;
 @property (nonatomic, strong) UITTTAttributedLabel  *contentLabel;
 @property (nonatomic, strong) UIView                *contentBgView;
+
+@property (nonatomic, strong) TimelineBottomButton  *likeButton;
+@property (nonatomic, strong) TimelineBottomButton  *commentButton;
 
 
 @end
@@ -50,12 +55,12 @@
             }];
             [self.contentBgView addSubview:self.nameLabel];
         }
-        if (_timeLabel) {
+        if (!_timeLabel) {
             _timeLabel = [UILabel labelWithFrame:CGRectMake(kScreen_Width-100, _nameLabel.top, 95, 20) font:[UIFont systemFontOfSize:kLabelSmallFont] textColor:[UIColor lightGrayColor] textAlignment:NSTextAlignmentRight];
             [self.contentBgView addSubview:_timeLabel];
         }
         if (!self.contentLabel) {
-            self.contentLabel = [[UITTTAttributedLabel alloc] initWithFrame:CGRectMake(self.nameLabel.left, self.nameLabel.bottom, kScreen_Width-self.nameLabel.left-5, 20)];
+            self.contentLabel = [[UITTTAttributedLabel alloc] initWithFrame:CGRectMake(self.nameLabel.left, self.nameLabel.bottom+5, kScreen_Width-self.nameLabel.left-5, 20)];
             self.contentLabel.font = [UIFont systemFontOfSize:kLabelSmallFont];
             self.contentLabel.textColor = [UIColor colorWithHexString:@"0x222222"];
             self.contentLabel.numberOfLines = 0;
@@ -65,7 +70,18 @@
             [self.contentLabel addLongPressForCopy];
             [self.contentBgView addSubview:self.contentLabel];
         }
-        
+        if (!_commentButton) {
+            _commentButton = [[TimelineBottomButton alloc] initWithFrame:CGRectMake(self.nameLabel.left, self.contentLabel.bottom+5, (kTimelineCell_ContentWidth)/2, 30)];
+            [_commentButton.myImageView setImage:[UIImage imageNamed:@"timeline_icon_like"]];
+            [_commentButton.myTextLabel setText:@"0"];
+            [self.contentView addSubview:_commentButton];
+        }
+        if (!_likeButton) {
+            _likeButton = [[TimelineBottomButton alloc] initWithFrame:CGRectMake(_commentButton.right, self.contentLabel.bottom+5, (kTimelineCell_ContentWidth)/2, 30)];
+            [_likeButton.myImageView setImage:[UIImage imageNamed:@"topic_comment_icon"]];
+            [_likeButton.myTextLabel setText:@"0"];
+            [self.contentView addSubview:_likeButton];
+        }
     }
     return self;
 }
@@ -80,9 +96,19 @@
         [blockSelf userBtnClicked];
     }];
     [self.nameLabel setText:self.timeline.userNickName];
+    [self.commentButton.myTextLabel setText:[NSString unitWithNumber:[NSString stringWithFormat:@"%@",self.timeline.commentCount]]];
+    [self.likeButton.myTextLabel setText:[NSString unitWithNumber:[NSString stringWithFormat:@"%@",self.timeline.likeCount]]];
+    
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:[self.timeline.createTime longLongValue]];
+    [self.timeLabel setText:[date stringDisplay_MMdd]];
+    
     [self.contentLabel setLongString:self.timeline.content withFitWidth:kTimelineCell_ContentWidth maxHeight:kTimeline_ContentMaxHeight];
     
+    
+    //从新设置视图位置
     self.contentBgView.height = [TimelineCell cellHeightWithObj:self.timeline]-5;
+    self.commentButton.top = self.contentLabel.bottom+10;
+    self.likeButton.top = self.contentLabel.bottom+10;
 }
 
 + (CGFloat)cellHeightWithObj:(id)obj{
@@ -90,6 +116,7 @@
     CGFloat cellHeight = 0;
     cellHeight += 30;
     cellHeight += [self contentLabelHeightWithTweet:timeline];
+    cellHeight += 30;
     return cellHeight;
 }
 

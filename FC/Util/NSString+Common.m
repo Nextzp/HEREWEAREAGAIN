@@ -49,4 +49,12 @@
     return [self getSizeWithFont:font constrainedToSize:size].width;
 }
 
++ (NSString *)unitWithNumber:(NSString *)str{
+    if ([str longLongValue] >= 10000) {
+        return [NSString stringWithFormat:@"%lld万",[str longLongValue]/10000];
+    }else{
+        return str;
+    }
+}
+
 @end
