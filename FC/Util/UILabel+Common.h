@@ -18,6 +18,7 @@
 - (void) setLongString:(NSString *)str withFitWidth:(CGFloat)width;
 - (void) setLongString:(NSString *)str withFitWidth:(CGFloat)width maxHeight:(CGFloat)maxHeight;
 - (void) setLongString:(NSString *)str withVariableWidth:(CGFloat)maxWidth;
+
 + (instancetype)labelWithFont:(UIFont *)font textColor:(UIColor *)textColor;
 
 @end

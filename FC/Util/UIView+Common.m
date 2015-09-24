@@ -17,4 +17,28 @@
     self.layer.borderColor = [UIColor colorWithHexString:@"0xdddddd"].CGColor;
 }
 
+- (CGFloat)maxXOfFrame{
+    return CGRectGetMaxX(self.frame);
+}
+
+- (void)addGradientLayerWithColors:(NSArray *)cgColorArray{
+    [self addGradientLayerWithColors:cgColorArray locations:nil startPoint:CGPointMake(0.0, 0.5) endPoint:CGPointMake(1.0, 0.5)];
+}
+
+- (void)addGradientLayerWithColors:(NSArray *)cgColorArray locations:(NSArray *)floatNumArray startPoint:(CGPoint )startPoint endPoint:(CGPoint)endPoint{
+    CAGradientLayer *layer = [CAGradientLayer layer];
+    layer.frame = self.bounds;
+    if (cgColorArray && [cgColorArray count] > 0) {
+        layer.colors = cgColorArray;
+    }else{
+        return;
+    }
+    if (floatNumArray && [floatNumArray count] == [cgColorArray count]) {
+        layer.locations = floatNumArray;
+    }
+    layer.startPoint = startPoint;
+    layer.endPoint = endPoint;
+    [self.layer addSublayer:layer];
+}
+
 @end

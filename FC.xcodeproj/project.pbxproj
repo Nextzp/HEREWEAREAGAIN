@@ -394,6 +394,15 @@
 		6E90AE461BAAB30C00A62E50 /* UIColor+expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90AE451BAAB30C00A62E50 /* UIColor+expanded.m */; };
 		6E90AE491BAAB5DF00A62E50 /* UITTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90AE481BAAB5DF00A62E50 /* UITTTAttributedLabel.m */; };
 		6E90AE4E1BAAC59D00A62E50 /* TimelineSendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90AE4D1BAAC59D00A62E50 /* TimelineSendViewController.m */; };
+		6E973FAD1BB28A9B007A822D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E973FAC1BB28A9B007A822D /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
+		6E973FB31BB28B6B007A822D /* Input_OnlyText_Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E973FAF1BB28B6B007A822D /* Input_OnlyText_Cell.m */; settings = {ASSET_TAGS = (); }; };
+		6E973FB41BB28B6B007A822D /* Input_OnlyText_Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E973FB01BB28B6B007A822D /* Input_OnlyText_Cell.xib */; settings = {ASSET_TAGS = (); }; };
+		6E973FB51BB28B6B007A822D /* LoginTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E973FB21BB28B6B007A822D /* LoginTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		6E973FB81BB28C2A007A822D /* UIButton+Bootstrap.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E973FB71BB28C2A007A822D /* UIButton+Bootstrap.m */; settings = {ASSET_TAGS = (); }; };
+		6E973FBB1BB2906F007A822D /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E973FBA1BB2906F007A822D /* Login.m */; settings = {ASSET_TAGS = (); }; };
+		6E973FC01BB3A8BF007A822D /* UserCenterHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E973FBF1BB3A8BF007A822D /* UserCenterHeadView.m */; settings = {ASSET_TAGS = (); }; };
+		6E973FC31BB3D2F1007A822D /* CustoLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E973FC21BB3D2F1007A822D /* CustoLabelView.m */; settings = {ASSET_TAGS = (); }; };
+		6E973FC71BB3F281007A822D /* headbgImg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6E973FC61BB3F281007A822D /* headbgImg.jpeg */; settings = {ASSET_TAGS = (); }; };
 		6EA706A51BAFF271006B8757 /* NSDate+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA706A41BAFF271006B8757 /* NSDate+Common.m */; };
 		6EA706AA1BAFF2E0006B8757 /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA706A81BAFF2E0006B8757 /* NSDate+Helper.m */; };
 		6EA706AB1BAFF2E0006B8757 /* README.textile in Resources */ = {isa = PBXBuildFile; fileRef = 6EA706A91BAFF2E0006B8757 /* README.textile */; };
@@ -867,6 +876,22 @@
 		6E90AE481BAAB5DF00A62E50 /* UITTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITTTAttributedLabel.m; sourceTree = "<group>"; };
 		6E90AE4C1BAAC59D00A62E50 /* TimelineSendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineSendViewController.h; sourceTree = "<group>"; };
 		6E90AE4D1BAAC59D00A62E50 /* TimelineSendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineSendViewController.m; sourceTree = "<group>"; };
+		6E973FAB1BB28A9B007A822D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		6E973FAC1BB28A9B007A822D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		6E973FAE1BB28B6B007A822D /* Input_OnlyText_Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Input_OnlyText_Cell.h; sourceTree = "<group>"; };
+		6E973FAF1BB28B6B007A822D /* Input_OnlyText_Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Input_OnlyText_Cell.m; sourceTree = "<group>"; };
+		6E973FB01BB28B6B007A822D /* Input_OnlyText_Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Input_OnlyText_Cell.xib; sourceTree = "<group>"; };
+		6E973FB11BB28B6B007A822D /* LoginTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginTableViewCell.h; sourceTree = "<group>"; };
+		6E973FB21BB28B6B007A822D /* LoginTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTableViewCell.m; sourceTree = "<group>"; };
+		6E973FB61BB28C2A007A822D /* UIButton+Bootstrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Bootstrap.h"; sourceTree = "<group>"; };
+		6E973FB71BB28C2A007A822D /* UIButton+Bootstrap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Bootstrap.m"; sourceTree = "<group>"; };
+		6E973FB91BB2906F007A822D /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
+		6E973FBA1BB2906F007A822D /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
+		6E973FBE1BB3A8BF007A822D /* UserCenterHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCenterHeadView.h; sourceTree = "<group>"; };
+		6E973FBF1BB3A8BF007A822D /* UserCenterHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCenterHeadView.m; sourceTree = "<group>"; };
+		6E973FC11BB3D2F1007A822D /* CustoLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustoLabelView.h; sourceTree = "<group>"; };
+		6E973FC21BB3D2F1007A822D /* CustoLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustoLabelView.m; sourceTree = "<group>"; };
+		6E973FC61BB3F281007A822D /* headbgImg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = headbgImg.jpeg; sourceTree = "<group>"; };
 		6EA706A31BAFF271006B8757 /* NSDate+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Common.h"; sourceTree = "<group>"; };
 		6EA706A41BAFF271006B8757 /* NSDate+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Common.m"; sourceTree = "<group>"; };
 		6EA706A71BAFF2E0006B8757 /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
@@ -1031,6 +1056,7 @@
 		6E836B451B9F2D3400C859B8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6E973FBC1BB39CAF007A822D /* User */,
 				6E836B501B9F2DEE00C859B8 /* Base */,
 				6E836B541BA01F7E00C859B8 /* Friend */,
 				6E836B4C1B9F2DA400C859B8 /* Share */,
@@ -1045,6 +1071,8 @@
 			children = (
 				6E90AE011BAA742D00A62E50 /* Timeline.h */,
 				6E90AE021BAA742D00A62E50 /* Timeline.m */,
+				6E973FB91BB2906F007A822D /* Login.h */,
+				6E973FBA1BB2906F007A822D /* Login.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1142,6 +1170,8 @@
 				6EA706B31BAFF7BB006B8757 /* TimelineBottomButton.m */,
 				6EA706C11BB133B0006B8757 /* CustomCollectionView.h */,
 				6EA706C21BB133B0006B8757 /* CustomCollectionView.m */,
+				6E973FC11BB3D2F1007A822D /* CustoLabelView.h */,
+				6E973FC21BB3D2F1007A822D /* CustoLabelView.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -1167,6 +1197,8 @@
 				6EA706A41BAFF271006B8757 /* NSDate+Common.m */,
 				6EA706AC1BAFF306006B8757 /* NSDate+Convenience.h */,
 				6EA706AD1BAFF306006B8757 /* NSDate+Convenience.m */,
+				6E973FB61BB28C2A007A822D /* UIButton+Bootstrap.h */,
+				6E973FB71BB28C2A007A822D /* UIButton+Bootstrap.m */,
 			);
 			name = OC_Category;
 			sourceTree = "<group>";
@@ -1733,6 +1765,7 @@
 				6E836CD81BA09D4A00C859B8 /* n_btn_followed_both@2x.png */,
 				6E836CD91BA09D4A00C859B8 /* n_btn_followed_not@2x.png */,
 				6E836CDA1BA09D4A00C859B8 /* n_btn_followed_yes@2x.png */,
+				6E973FC61BB3F281007A822D /* headbgImg.jpeg */,
 				6E836CDB1BA09D4A00C859B8 /* n_sex_man_icon@2x.png */,
 				6E836CDC1BA09D4A00C859B8 /* n_sex_woman_icon@2x.png */,
 				6E836CDD1BA09D4A00C859B8 /* user_info_detail@2x.png */,
@@ -1817,6 +1850,29 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		6E973FBC1BB39CAF007A822D /* User */ = {
+			isa = PBXGroup;
+			children = (
+				6E973FAB1BB28A9B007A822D /* LoginViewController.h */,
+				6E973FAC1BB28A9B007A822D /* LoginViewController.m */,
+				6E973FAE1BB28B6B007A822D /* Input_OnlyText_Cell.h */,
+				6E973FAF1BB28B6B007A822D /* Input_OnlyText_Cell.m */,
+				6E973FB01BB28B6B007A822D /* Input_OnlyText_Cell.xib */,
+				6E973FB11BB28B6B007A822D /* LoginTableViewCell.h */,
+				6E973FB21BB28B6B007A822D /* LoginTableViewCell.m */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		6E973FBD1BB3A3C6007A822D /* Center */ = {
+			isa = PBXGroup;
+			children = (
+				6E973FBE1BB3A8BF007A822D /* UserCenterHeadView.h */,
+				6E973FBF1BB3A8BF007A822D /* UserCenterHeadView.m */,
+			);
+			name = Center;
+			sourceTree = "<group>";
+		};
 		6EA706A61BAFF2E0006B8757 /* NSDate+Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -1856,6 +1912,7 @@
 		6EA948231BA90D980004F32A /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				6E973FBD1BB3A3C6007A822D /* Center */,
 				6E36C81A1BA2C559006F7910 /* Friend */,
 				6E836B631BA024F700C859B8 /* Common */,
 			);
@@ -2115,6 +2172,7 @@
 				6E836D4C1BA09D4A00C859B8 /* icon_file_movie@2x.png in Resources */,
 				6E836DB71BA09D4A00C859B8 /* timeBtn_Nav@2x.png in Resources */,
 				6E836D1B1BA09D4A00C859B8 /* coding_emoji_14@2x.png in Resources */,
+				6E973FB41BB28B6B007A822D /* Input_OnlyText_Cell.xib in Resources */,
 				6E836DFC1BA09D4A00C859B8 /* taskPriority2@2x.png in Resources */,
 				6E836DFE1BA09D4A00C859B8 /* taskPriority3@2x.png in Resources */,
 				6E836D8C1BA09D4A00C859B8 /* intro_tip_5@3x.png in Resources */,
@@ -2248,6 +2306,7 @@
 				6E836D661BA09D4A00C859B8 /* icon_triangle@2x.png in Resources */,
 				6E836E191BA09D4A00C859B8 /* tipIcon_ProjectMember@2x.png in Resources */,
 				6E836DE11BA09D4A00C859B8 /* section_btn_close@2x.png in Resources */,
+				6E973FC71BB3F281007A822D /* headbgImg.jpeg in Resources */,
 				6E836D991BA09D4A00C859B8 /* keyboard_topic@2x.png in Resources */,
 				6E836DF11BA09D4A00C859B8 /* tweet_selected@2x.png in Resources */,
 				6E836DC61BA09D4A00C859B8 /* project_item_activity@2x.png in Resources */,
@@ -2428,6 +2487,7 @@
 			files = (
 				6EA707171BB19B82006B8757 /* MJPhotoBrowser.m in Sources */,
 				6E90AE031BAA742D00A62E50 /* Timeline.m in Sources */,
+				6E973FB81BB28C2A007A822D /* UIButton+Bootstrap.m in Sources */,
 				6E36C8171BA2BB12006F7910 /* CustomNavigationView.m in Sources */,
 				6EA9485D1BA953390004F32A /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				6EA948621BA953390004F32A /* UIRefreshControl+AFNetworking.m in Sources */,
@@ -2437,6 +2497,7 @@
 				6E90AE371BAAAC3F00A62E50 /* SDWebImageDownloaderOperation.m in Sources */,
 				6EA948271BA950E50004F32A /* FC_NetAPIManager.m in Sources */,
 				6EA948581BA953390004F32A /* AFNetworkReachabilityManager.m in Sources */,
+				6E973FC01BB3A8BF007A822D /* UserCenterHeadView.m in Sources */,
 				6E90ADFD1BAA534300A62E50 /* YLImageView.m in Sources */,
 				6E90ADFC1BAA534300A62E50 /* YLGIFImage.m in Sources */,
 				6EA706AA1BAFF2E0006B8757 /* NSDate+Helper.m in Sources */,
@@ -2455,9 +2516,11 @@
 				6E6033721BADE7DF00D469BE /* LocalJsonManager.m in Sources */,
 				6EA948611BA953390004F32A /* UIProgressView+AFNetworking.m in Sources */,
 				6EA948591BA953390004F32A /* AFSecurityPolicy.m in Sources */,
+				6E973FBB1BB2906F007A822D /* Login.m in Sources */,
 				6E90AE341BAAAC3F00A62E50 /* SDWebImageCompat.m in Sources */,
 				6E90AE3C1BAAAC3F00A62E50 /* UIImage+MultiFormat.m in Sources */,
 				6E836B5C1BA020A000C859B8 /* Root_RecordViewController.m in Sources */,
+				6E973FC31BB3D2F1007A822D /* CustoLabelView.m in Sources */,
 				6EA7071C1BB19B82006B8757 /* SDWebImageManager+MJ.m in Sources */,
 				6EA948541BA953390004F32A /* AFHTTPRequestOperationManager.m in Sources */,
 				6E90AE3D1BAAAC3F00A62E50 /* UIImage+WebP.m in Sources */,
@@ -2469,6 +2532,7 @@
 				6E90AE391BAAAC3F00A62E50 /* SDWebImagePrefetcher.m in Sources */,
 				6EA707151BB19B82006B8757 /* MJPhoto.m in Sources */,
 				6E6033781BAE017F00D469BE /* NSString+Common.m in Sources */,
+				6E973FB31BB28B6B007A822D /* Input_OnlyText_Cell.m in Sources */,
 				6E836B531B9F2E0000C859B8 /* BaseViewController.m in Sources */,
 				6EA948571BA953390004F32A /* AFURLSessionManager.m in Sources */,
 				6EA706AE1BAFF306006B8757 /* NSDate+Convenience.m in Sources */,
@@ -2479,10 +2543,12 @@
 				6EA7071A1BB19B82006B8757 /* MJPhotoToolbar.m in Sources */,
 				6E90AE491BAAB5DF00A62E50 /* UITTTAttributedLabel.m in Sources */,
 				6EA948601BA953390004F32A /* UIImageView+AFNetworking.m in Sources */,
+				6E973FAD1BB28A9B007A822D /* LoginViewController.m in Sources */,
 				6E90AE351BAAAC3F00A62E50 /* SDWebImageDecoder.m in Sources */,
 				6E90AE461BAAB30C00A62E50 /* UIColor+expanded.m in Sources */,
 				6E836B6D1BA02B9700C859B8 /* TabBarItemButton.m in Sources */,
 				6E90AE3E1BAAAC3F00A62E50 /* UIImageView+HighlightedWebCache.m in Sources */,
+				6E973FB51BB28B6B007A822D /* LoginTableViewCell.m in Sources */,
 				6E836B621BA021DF00C859B8 /* Root_TabBarController.m in Sources */,
 				6E90AE431BAAB29000A62E50 /* UIView+Common.m in Sources */,
 				6EA707181BB19B82006B8757 /* MJPhotoLoadingView.m in Sources */,
@@ -2612,15 +2678,15 @@
 			baseConfigurationReference = F01DA6542D012012B58F3C2D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bo Xu (Q39G88D7FG)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Bo Xu (Q39G88D7FG)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FC/PrefixHeader.pch";
 				INFOPLIST_FILE = FC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "e2c8e432-5884-418e-93fb-cd3f63cf9c0f";
 			};
 			name = Debug;
 		};
@@ -2629,15 +2695,15 @@
 			baseConfigurationReference = 8B84C745E9D52B883B1994E2 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bo Xu (Q39G88D7FG)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Bo Xu (Q39G88D7FG)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FC/PrefixHeader.pch";
 				INFOPLIST_FILE = FC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "e2c8e432-5884-418e-93fb-cd3f63cf9c0f";
 			};
 			name = Release;
 		};

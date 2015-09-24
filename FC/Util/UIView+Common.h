@@ -11,5 +11,9 @@
 @interface UIView(Common)
 
 - (void)doCircleFrame;
+- (CGFloat)maxXOfFrame;
+
+- (void)addGradientLayerWithColors:(NSArray *)cgColorArray;
+- (void)addGradientLayerWithColors:(NSArray *)cgColorArray locations:(NSArray *)floatNumArray startPoint:(CGPoint )aPoint endPoint:(CGPoint)endPoint;
 
 @end
