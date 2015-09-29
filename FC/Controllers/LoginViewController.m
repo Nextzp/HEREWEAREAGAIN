@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "LoginTableViewCell.h"
 #import "Input_OnlyText_Cell.h"
+#import "RegisterViewController.h"
 #import <NYXImagesKit/UIImage+Resizing.h>
 #import <UIImage+BlurredFrame/UIImage+BlurredFrame.h>
 
@@ -242,7 +243,8 @@
 }
 
 - (void)goRegisterVC:(id)sender{
-    
+    RegisterViewController *vc = [[RegisterViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)dismissButtonClicked{

@@ -20,6 +20,12 @@
     
     self.navBarView = [[CustomNavigationView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, 64)];
     [self.view addSubview:self.navBarView];
+    
+    [self.navBarView.backBtn addTarget:self action:@selector(popBack:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)popBack:(id)sender{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

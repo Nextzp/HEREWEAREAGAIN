@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CustomNavigationView : UIView{
-    UIButton *backBtn;
-}
+@interface CustomNavigationView : UIView
 
+@property (strong, nonatomic) UIButton *backBtn;
 @property (strong, nonatomic) UILabel *navTitleLabel;
 
 - (void)hiddenBackButton:(BOOL)isHidden;
+
 
 @end

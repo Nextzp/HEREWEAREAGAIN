@@ -51,8 +51,12 @@
 
 #pragma mark - Network Request
 - (void)requestFriendTimelineData{
-//    WeakSelfType blockSelf = self;
-//    [[FC_NetAPIManager sharedManager] request_TimelineDataWithParams:nil andBlock:^(id data, NSError *error) {
+    WeakSelfType blockSelf = self;
+//    [[FC_NetAPIManager sharedManager] request_TimelineDataWithParams:@{@"username":@"18583750607",
+//                                                                       @"password":@"123123",
+//                                                                       @"nickName":@"Braspring"
+//                                                                       }
+//                                                            andBlock:^(id data, NSError *error) {
 //        [blockSelf.timelineArray addObjectsFromArray:data];
 //        [blockSelf.myTableView reloadData];
 //    }];

@@ -20,9 +20,9 @@
 }
 
 - (void)viewInitialize{
-    backBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 20, 44, 44)];
-    [backBtn setImage:[UIImage imageNamed:@"back_arrow"] forState:UIControlStateNormal];
-    [self addSubview:backBtn];
+    _backBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 20, 44, 44)];
+    [_backBtn setImage:[UIImage imageNamed:@"back_arrow"] forState:UIControlStateNormal];
+    [self addSubview:_backBtn];
     
     self.navTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(44, 20, kScreen_Width-88, 44)];
     [self.navTitleLabel setFont:[UIFont boldSystemFontOfSize:18]];
@@ -33,7 +33,7 @@
 }
 
 - (void)hiddenBackButton:(BOOL)isHidden{
-    backBtn.hidden = isHidden;
+    _backBtn.hidden = isHidden;
 }
 
 @end

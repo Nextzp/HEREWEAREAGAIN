@@ -394,6 +394,7 @@
 		6E90AE461BAAB30C00A62E50 /* UIColor+expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90AE451BAAB30C00A62E50 /* UIColor+expanded.m */; };
 		6E90AE491BAAB5DF00A62E50 /* UITTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90AE481BAAB5DF00A62E50 /* UITTTAttributedLabel.m */; };
 		6E90AE4E1BAAC59D00A62E50 /* TimelineSendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E90AE4D1BAAC59D00A62E50 /* TimelineSendViewController.m */; };
+		6E94F1041BBA8D0100B885A2 /* MessageVerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E94F1031BBA8D0100B885A2 /* MessageVerifyViewController.m */; settings = {ASSET_TAGS = (); }; };
 		6E973FAD1BB28A9B007A822D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E973FAC1BB28A9B007A822D /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
 		6E973FB31BB28B6B007A822D /* Input_OnlyText_Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E973FAF1BB28B6B007A822D /* Input_OnlyText_Cell.m */; settings = {ASSET_TAGS = (); }; };
 		6E973FB41BB28B6B007A822D /* Input_OnlyText_Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E973FB01BB28B6B007A822D /* Input_OnlyText_Cell.xib */; settings = {ASSET_TAGS = (); }; };
@@ -440,6 +441,8 @@
 		6EA948631BA953390004F32A /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA948521BA953390004F32A /* UIWebView+AFNetworking.m */; };
 		6EA948661BA9538E0004F32A /* FCNetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA948651BA9538E0004F32A /* FCNetAPIClient.m */; };
 		6EA948691BA954FE0004F32A /* NSObject+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA948681BA954FE0004F32A /* NSObject+Common.m */; };
+		6EF413321BB928DB004D39DC /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EF413311BB928DB004D39DC /* RegisterViewController.m */; settings = {ASSET_TAGS = (); }; };
+		6EF413351BB92E28004D39DC /* register_textfield_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EF413341BB92E28004D39DC /* register_textfield_background@2x.png */; settings = {ASSET_TAGS = (); }; };
 		D79F55B28CF099E8FCF7402E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1FDB3CAEF6D1A94DCF4530 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -876,6 +879,8 @@
 		6E90AE481BAAB5DF00A62E50 /* UITTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITTTAttributedLabel.m; sourceTree = "<group>"; };
 		6E90AE4C1BAAC59D00A62E50 /* TimelineSendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineSendViewController.h; sourceTree = "<group>"; };
 		6E90AE4D1BAAC59D00A62E50 /* TimelineSendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineSendViewController.m; sourceTree = "<group>"; };
+		6E94F1021BBA8D0100B885A2 /* MessageVerifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageVerifyViewController.h; sourceTree = "<group>"; };
+		6E94F1031BBA8D0100B885A2 /* MessageVerifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageVerifyViewController.m; sourceTree = "<group>"; };
 		6E973FAB1BB28A9B007A822D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		6E973FAC1BB28A9B007A822D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		6E973FAE1BB28B6B007A822D /* Input_OnlyText_Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Input_OnlyText_Cell.h; sourceTree = "<group>"; };
@@ -966,6 +971,9 @@
 		6EA948651BA9538E0004F32A /* FCNetAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCNetAPIClient.m; sourceTree = "<group>"; };
 		6EA948671BA954FE0004F32A /* NSObject+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Common.h"; sourceTree = "<group>"; };
 		6EA948681BA954FE0004F32A /* NSObject+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Common.m"; sourceTree = "<group>"; };
+		6EF413301BB928DB004D39DC /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		6EF413311BB928DB004D39DC /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		6EF413341BB92E28004D39DC /* register_textfield_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "register_textfield_background@2x.png"; sourceTree = "<group>"; };
 		8B84C745E9D52B883B1994E2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F01DA6542D012012B58F3C2D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1206,6 +1214,7 @@
 		6E836B751BA09D4900C859B8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6EF413331BB92E28004D39DC /* add */,
 				6E836B761BA09D4900C859B8 /* add_user_icon@2x.png */,
 				6E836B771BA09D4900C859B8 /* addPictureBgImage@2x.png */,
 				6E836B781BA09D4900C859B8 /* banner */,
@@ -1860,6 +1869,10 @@
 				6E973FB01BB28B6B007A822D /* Input_OnlyText_Cell.xib */,
 				6E973FB11BB28B6B007A822D /* LoginTableViewCell.h */,
 				6E973FB21BB28B6B007A822D /* LoginTableViewCell.m */,
+				6EF413301BB928DB004D39DC /* RegisterViewController.h */,
+				6EF413311BB928DB004D39DC /* RegisterViewController.m */,
+				6E94F1021BBA8D0100B885A2 /* MessageVerifyViewController.h */,
+				6E94F1031BBA8D0100B885A2 /* MessageVerifyViewController.m */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -2023,6 +2036,14 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
+		6EF413331BB92E28004D39DC /* add */ = {
+			isa = PBXGroup;
+			children = (
+				6EF413341BB92E28004D39DC /* register_textfield_background@2x.png */,
+			);
+			path = add;
+			sourceTree = "<group>";
+		};
 		B4F2694088849E086E81627F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -2060,6 +2081,7 @@
 		6E836B141B9F2C6F00C859B8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = Lishan;
 				TargetAttributes = {
@@ -2383,6 +2405,7 @@
 				6E836D5E1BA09D4A00C859B8 /* icon_locationed@2x.png in Resources */,
 				6E836D861BA09D4A00C859B8 /* intro_tip_2@3x.png in Resources */,
 				6E836D3C1BA09D4A00C859B8 /* file_changeType_RENAME@2x.png in Resources */,
+				6EF413351BB92E28004D39DC /* register_textfield_background@2x.png in Resources */,
 				6E836CEE1BA09D4A00C859B8 /* btn_file_reDo@2x.png in Resources */,
 				6E836CF61BA09D4A00C859B8 /* button_file_move_enable@2x.png in Resources */,
 				6E836D301BA09D4A00C859B8 /* coding_emoji_35@2x.png in Resources */,
@@ -2530,6 +2553,7 @@
 				6E836B591BA0209400C859B8 /* Root_FriendViewController.m in Sources */,
 				6E6033751BADF56B00D469BE /* BaseCell.m in Sources */,
 				6E90AE391BAAAC3F00A62E50 /* SDWebImagePrefetcher.m in Sources */,
+				6E94F1041BBA8D0100B885A2 /* MessageVerifyViewController.m in Sources */,
 				6EA707151BB19B82006B8757 /* MJPhoto.m in Sources */,
 				6E6033781BAE017F00D469BE /* NSString+Common.m in Sources */,
 				6E973FB31BB28B6B007A822D /* Input_OnlyText_Cell.m in Sources */,
@@ -2552,6 +2576,7 @@
 				6E836B621BA021DF00C859B8 /* Root_TabBarController.m in Sources */,
 				6E90AE431BAAB29000A62E50 /* UIView+Common.m in Sources */,
 				6EA707181BB19B82006B8757 /* MJPhotoLoadingView.m in Sources */,
+				6EF413321BB928DB004D39DC /* RegisterViewController.m in Sources */,
 				6EA706C31BB133B0006B8757 /* CustomCollectionView.m in Sources */,
 				6EA707191BB19B82006B8757 /* MJPhotoProgressView.m in Sources */,
 				6E836B711BA02D1B00C859B8 /* UILabel+Common.m in Sources */,
@@ -2678,8 +2703,15 @@
 			baseConfigurationReference = F01DA6542D012012B58F3C2D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Bo Xu (Q39G88D7FG)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Bo Xu (Q39G88D7FG)";
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FC/Vendor",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FC/PrefixHeader.pch";
 				INFOPLIST_FILE = FC/Info.plist;
@@ -2687,6 +2719,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e2c8e432-5884-418e-93fb-cd3f63cf9c0f";
+				SWIFT_OBJC_BRIDGING_HEADER = "FC/View/FC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -2695,8 +2729,15 @@
 			baseConfigurationReference = 8B84C745E9D52B883B1994E2 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Bo Xu (Q39G88D7FG)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Bo Xu (Q39G88D7FG)";
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FC/Vendor",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FC/PrefixHeader.pch";
 				INFOPLIST_FILE = FC/Info.plist;
@@ -2704,6 +2745,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e2c8e432-5884-418e-93fb-cd3f63cf9c0f";
+				SWIFT_OBJC_BRIDGING_HEADER = "FC/View/FC-Bridging-Header.h";
 			};
 			name = Release;
 		};

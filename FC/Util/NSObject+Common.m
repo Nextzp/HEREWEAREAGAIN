@@ -42,7 +42,7 @@
 
 + (NSString *)baseURLStr{
     NSString *baseURLStr;
-    baseURLStr = @"http://localhost:9000";
+    baseURLStr = @"http://120.55.190.154:3001";
     return baseURLStr;
 }
 

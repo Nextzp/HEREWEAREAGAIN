@@ -20,8 +20,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    Root_TabBarController *vc = [[Root_TabBarController alloc] init];
-    [self.window setRootViewController:vc];
+    
+    [self getUserLocation];
+    
+    
+    
+    LoginViewController *vc = [[LoginViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self.window setRootViewController:nav];
     
     [self setAppDefaultUI];
     [self.window makeKeyAndVisible];
@@ -29,10 +35,51 @@
     return YES;
 }
 
+- (void)getUserLocation{
+    self.locationMgr = [[CLLocationManager alloc] init];
+    //设置代理
+    self.locationMgr.delegate = self;
+    
+    // 设置定位精度
+    // kCLLocationAccuracyNearestTenMeters:精度10米
+    // kCLLocationAccuracyHundredMeters:精度100 米
+    // kCLLocationAccuracyKilometer:精度1000 米
+    // kCLLocationAccuracyThreeKilometers:精度3000米
+    // kCLLocationAccuracyBest:设备使用电池供电时候最高的精度
+    // kCLLocationAccuracyBestForNavigation:导航情况下最高精度，一般要有外接电源时才能使用
+    self.locationMgr.desiredAccuracy = kCLLocationAccuracyBest;
+    
+    // distanceFilter是距离过滤器，为了减少对定位装置的轮询次数，位置的改变不会每次都去通知委托，而是在移动了足够的距离时才通知委托程序
+    // 它的单位是米，这里设置为至少移动1000再通知委托处理更新;
+    self.locationMgr.distanceFilter = 1000.0f;
+    
+    //开始定位
+    [self.locationMgr requestAlwaysAuthorization];
+    [self.locationMgr startUpdatingLocation];
+}
+
 //设置app默认样式
 - (void)setAppDefaultUI{
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
 }
+
+// iso 6.0以上SDK版本使用，包括6.0。
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    CLLocation *cl = [locations objectAtIndex:0];
+    NSLog(@"纬度--%f",cl.coordinate.latitude);
+    NSLog(@"经度--%f",cl.coordinate.longitude);
+    
+}
+
+
+//获取定位失败回调方法
+#pragma mark - location Delegate
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"定位错误");
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -55,5 +102,6 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
 
 @end

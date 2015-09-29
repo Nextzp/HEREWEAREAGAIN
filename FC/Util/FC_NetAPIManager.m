@@ -21,7 +21,7 @@
 }
 
 - (void)request_TimelineDataWithParams:(id)params andBlock:(void (^)(id, NSError *))block{
-    NSString *path = @"friendTimeline";
+    NSString *path = @"/auth/register";
     [[FCNetAPIClient sharedJsonClient] requestJsonDataWithPath:path
                                                     withParams:params
                                                 withMethodType:Post
