@@ -18,20 +18,21 @@
         if (!_bgImageView) {
             _bgImageView = [[UITapImageView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
             _bgImageView.layer.masksToBounds = YES;
-            UIImage *bgImage = [UIImage imageNamed:@"headbgImg.jpeg"];
+            UIImage *bgImage = [UIImage imageNamed:@"headBgImage.jpeg"];
+            [_bgImageView setBackgroundColor:[UIColor colorWithHexString:kAPPMainColorStr]];
 
             CGSize bgImageSize = bgImage.size, bgViewSize = _bgImageView.frame.size;
             if (bgImageSize.width > bgViewSize.width && bgImageSize.height > bgViewSize.height) {
                 bgImage = [bgImage scaleToSize:bgViewSize usingMode:NYXResizeModeAspectFill];
             }
             bgImage = [bgImage applyBlurWithRadius:0.3 tintColor:[UIColor colorWithWhite:1.0 alpha:0.1] saturationDeltaFactor:8 maskImage:nil atFrame:CGRectMake(0, 0, bgImage.size.width, bgImage.size.height)];
-            _bgImageView.image = bgImage;
+//            _bgImageView.image = bgImage;
             //黑色遮罩
-            UIColor *blackColor = [UIColor blackColor];
-            [_bgImageView addGradientLayerWithColors:@[(id)[blackColor colorWithAlphaComponent:0.4].CGColor,
-                                                 (id)[blackColor colorWithAlphaComponent:0.5].CGColor]
-                                     locations:nil
-                                    startPoint:CGPointMake(0.5, 0.0) endPoint:CGPointMake(0.5, 1.0)];
+//            UIColor *blackColor = [UIColor blackColor];
+//            [_bgImageView addGradientLayerWithColors:@[(id)[blackColor colorWithAlphaComponent:0.4].CGColor,
+//                                                 (id)[blackColor colorWithAlphaComponent:0.5].CGColor]
+//                                     locations:nil
+//                                    startPoint:CGPointMake(0.5, 0.0) endPoint:CGPointMake(0.5, 1.0)];
             [_bgImageView setContentMode:UIViewContentModeScaleAspectFill];
             [self addSubview:_bgImageView];
         }
@@ -41,7 +42,7 @@
             _headImgView.layer.borderWidth = 1;
             _headImgView.layer.borderColor = [[UIColor whiteColor] CGColor];
             _headImgView.layer.masksToBounds = YES;
-            [_headImgView setContentMode:UIViewContentModeCenter];
+            [_headImgView setContentMode:UIViewContentModeScaleAspectFill];
             [self addSubview:_headImgView];
         }
         if (!_nameLabel) {
@@ -63,13 +64,13 @@
         
         if (!_followCountLabel) {
             _followCountLabel = [UILabel labelWithFrame:CGRectMake(0, self.frame.size.height-60, self.frame.size.width/2, 40) font:[UIFont boldSystemFontOfSize:20] textColor:[UIColor whiteColor] textAlignment:NSTextAlignmentCenter];
-            _followCountLabel.text = @"3598";
+            _followCountLabel.text = @"0";
             [self addSubview:_followCountLabel];
         }
         
         if (!_fansCountLabel) {
             _fansCountLabel = [UILabel labelWithFrame:CGRectMake(self.frame.size.width/2, self.frame.size.height-60, self.frame.size.width/2, 40) font:[UIFont boldSystemFontOfSize:20] textColor:[UIColor whiteColor] textAlignment:NSTextAlignmentCenter];
-            _fansCountLabel.text = @"124345";
+            _fansCountLabel.text = @"0";
             [self addSubview:_fansCountLabel];
         }
         
