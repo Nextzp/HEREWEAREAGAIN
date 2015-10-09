@@ -47,7 +47,7 @@
 #define kKeyWindow [UIApplication sharedApplication].keyWindow
 
 #define kAppMainBackgroundColor [UIColor colorWithRed:240.0 / 255.0f green:240.0 / 255.0f blue:240.0 / 255.0f alpha:1.0f]
-#define kAPPMainColorStr @"0x008000"
+#define kAPPMainColorStr @"0x41A7B2"
 #define kColorTableBG [UIColor colorWithHexString:@"0xfafafa"]
 #define RGB(r, g, b)            [UIColor colorWithRed:r / 255.0f green:g / 255.0f blue:b / 255.0f alpha:1.0f]
 #define RGBA(r, g, b, a)        [UIColor colorWithRed:r / 255.0f green:g / 255.0f blue:b / 255.0f alpha:a]
@@ -72,6 +72,8 @@
 #define kHigher_iOS_6_1 (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1)
 #define kHigher_iOS_6_1_DIS(_X_) ([[NSNumber numberWithBool:kHigher_iOS_6_1] intValue] * _X_)
 #define kNotHigher_iOS_6_1_DIS(_X_) (-([[NSNumber numberWithBool:kHigher_iOS_6_1] intValue]-1) * _X_)
+
+#define kAPPDELEGATE ((AppDelegate *)[UIApplication sharedApplication].delegate)
 
 //链接颜色
 #define kLinkAttributes     @{(__bridge NSString *)kCTUnderlineStyleAttributeName : [NSNumber numberWithBool:NO],(NSString *)kCTForegroundColorAttributeName : (__bridge id)[UIColor colorWithHexString:@"0x3bbd79"].CGColor}
