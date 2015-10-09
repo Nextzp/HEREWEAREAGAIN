@@ -9,6 +9,10 @@
 #import "AppDelegate.h"
 #import "Root_TabBarController.h"
 #import "LoginViewController.h"
+#import <SMS_SDK/SMS_SDK.h>
+
+#define SMSAppKey       @"ad8df80a6df4"
+#define SMSAppSecret    @"173d4e55f517942a2755557a8a7f3d90"
 
 @interface AppDelegate ()
 
@@ -20,16 +24,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    
+    [self setupLoginViewController];
     [self getUserLocation];
     
-    
-    
-    LoginViewController *vc = [[LoginViewController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-    [self.window setRootViewController:nav];
-    
     [self setAppDefaultUI];
+    [self registerSMS]; //注册短信业务
     [self.window makeKeyAndVisible];
     
     return YES;
@@ -78,6 +77,22 @@
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
     NSLog(@"定位错误");
+}
+
+- (void)setupLoginViewController{
+    LoginViewController *vc = [[LoginViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self.window setRootViewController:nav];
+}
+
+- (void)setupTabViewController{
+    Root_TabBarController *vc = [[Root_TabBarController alloc] init];
+    self.window.rootViewController = vc;
+}
+
+#pragma mark - SMS
+- (void)registerSMS{
+    [SMS_SDK registerApp:SMSAppKey withSecret:SMSAppSecret];
 }
 
 

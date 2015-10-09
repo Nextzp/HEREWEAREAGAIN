@@ -12,6 +12,7 @@
 #import "RegisterViewController.h"
 #import <NYXImagesKit/UIImage+Resizing.h>
 #import <UIImage+BlurredFrame/UIImage+BlurredFrame.h>
+#import "AppDelegate.h"
 
 @interface LoginViewController ()
 
@@ -239,7 +240,8 @@
 }
 
 - (void)cannotLoginBtnClicked:(id)sender{
-    
+    [self showStatusBarSuccessStr:@"登录成功"];
+    [kAPPDELEGATE setupTabViewController];
 }
 
 - (void)goRegisterVC:(id)sender{

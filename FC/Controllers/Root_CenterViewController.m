@@ -14,6 +14,7 @@
 @interface Root_CenterViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) UITableView *myTableView;
+@property (strong, nonatomic) NSArray   *settingArray;
 
 @end
 
@@ -27,16 +28,26 @@
         _myTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, kScreen_Height-46) style:UITableViewStyleGrouped];
         _myTableView.delegate = self;
         _myTableView.dataSource = self;
-        [_myTableView setBackgroundColor:[UIColor blackColor]];
+        [_myTableView setBackgroundColor:[UIColor clearColor]];
         [_myTableView setBackgroundView:nil];
-        [_myTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+        [_myTableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
         [self.view addSubview:_myTableView];
     }
+    
+    self.settingArray = @[@[@"我的消息",@"我的好友",@"我的动态",@"我的赞"],@[@"设置"]];
 }
 
 #pragma mark - UITableViewDataSource and UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    if (section == 0) {
+        return 4;
+    }else{
+        return 1;
+    }
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return self.settingArray.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -44,16 +55,24 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UserCenterHeadView *headView = [[UserCenterHeadView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, HeadBackgroundHeight)];
-    [headView.headImgView setImage:[UIImage imageNamed:@"coding_emoji_31"]];
-    [headView.addressView.imgView setImage:[UIImage imageNamed:@"icon_not_locationed"]];
-    [headView.addressView setTitleString:@"四川省 成都市"];
-    headView.backgroundColor = [UIColor redColor];
-    return headView;
+    if (section == 0) {
+        UserCenterHeadView *headView = [[UserCenterHeadView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, HeadBackgroundHeight)];
+        [headView.headImgView setImage:[UIImage imageNamed:@"head.jpeg"]];
+        [headView.addressView.imgView setImage:[UIImage imageNamed:@"icon_not_locationed"]];
+        [headView.addressView setTitleString:@"四川省 成都市"];
+        headView.backgroundColor = [UIColor redColor];
+        return headView;
+    }else{
+        return nil;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return HeadBackgroundHeight;
+    if (section == 0) {
+        return HeadBackgroundHeight;
+    }else{
+        return 10;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -61,7 +80,7 @@
     if (!celle) {
         celle = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
-    celle.textLabel.text = @"dsf";
+    celle.textLabel.text = [[self.settingArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
     return celle;
 }
 

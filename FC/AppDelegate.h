@@ -17,6 +17,8 @@
 @property (nonatomic, retain) CLLocationManager* locationMgr;
 @property (nonatomic, retain) CLGeocoder* clGeocoder;// iso 5.0及5.0以上SDK版本使
 
+- (void)setupTabViewController;
+- (void)setupLoginViewController;
 
 @end
 
