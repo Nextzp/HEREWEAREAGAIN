@@ -16,4 +16,6 @@
 
 + (NSString *)unitWithNumber:(NSString *)str;
 
++ (BOOL)isMobileNumberClassification:(NSString *)mobileString;
+
 @end

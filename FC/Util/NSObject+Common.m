@@ -7,6 +7,8 @@
 //
 
 #import "NSObject+Common.h"
+#import "JDStatusBarNotification.h"
+#import "MBProgressHUD+Add.h"
 
 @implementation NSObject(Common)
 
@@ -36,6 +38,64 @@
         return tipStr;
     }
     return nil;
+}
+
+- (BOOL)showError:(NSError *)error{
+    if ([JDStatusBarNotification isVisible]) {//如果statusBar上面正在显示信息，则不再用hud显示error
+        NSLog(@"如果statusBar上面正在显示信息，则不再用hud显示error");
+        return NO;
+    }
+    NSString *tipStr = [self tipFromError:error];
+    [self showHudTipStr:tipStr];
+    return YES;
+}
+- (void)showHudTipStr:(NSString *)tipStr{
+    if (tipStr && tipStr.length > 0) {
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:kKeyWindow animated:YES];
+        hud.mode = MBProgressHUDModeText;
+        hud.detailsLabelFont = [UIFont boldSystemFontOfSize:15.0];
+        hud.detailsLabelText = tipStr;
+        hud.margin = 10.f;
+        hud.removeFromSuperViewOnHide = YES;
+        [hud hide:YES afterDelay:1.0];
+    }
+}
+- (void)showStatusBarQueryStr:(NSString *)tipStr{
+    [JDStatusBarNotification showWithStatus:tipStr styleName:JDStatusBarStyleSuccess];
+    [JDStatusBarNotification showActivityIndicator:YES indicatorStyle:UIActivityIndicatorViewStyleWhite];
+}
+- (void)showStatusBarErrorStr:(NSString *)tipStr{
+    [JDStatusBarNotification showActivityIndicator:NO indicatorStyle:UIActivityIndicatorViewStyleWhite];
+    [JDStatusBarNotification showWithStatus:tipStr dismissAfter:1.5 styleName:JDStatusBarStyleError];
+}
+- (void)showStatusBarSuccessStr:(NSString *)tipStr{
+    if ([JDStatusBarNotification isVisible]) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [JDStatusBarNotification showActivityIndicator:NO indicatorStyle:UIActivityIndicatorViewStyleWhite];
+            [JDStatusBarNotification showWithStatus:tipStr dismissAfter:1.5 styleName:JDStatusBarStyleSuccess];
+        });
+    }else{
+        [JDStatusBarNotification showActivityIndicator:NO indicatorStyle:UIActivityIndicatorViewStyleWhite];
+        [JDStatusBarNotification showWithStatus:tipStr dismissAfter:1.5 styleName:JDStatusBarStyleSuccess];
+    }
+}
+- (void)showStatusBarError:(NSError *)error{
+    if ([JDStatusBarNotification isVisible]) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [JDStatusBarNotification showActivityIndicator:NO indicatorStyle:UIActivityIndicatorViewStyleWhite];
+            [JDStatusBarNotification showWithStatus:[self tipFromError:error] dismissAfter:1.5 styleName:JDStatusBarStyleError];
+        });
+    }else{
+        [JDStatusBarNotification showActivityIndicator:NO indicatorStyle:UIActivityIndicatorViewStyleWhite];
+        [JDStatusBarNotification showWithStatus:[self tipFromError:error] dismissAfter:1.5 styleName:JDStatusBarStyleError];
+    }
+}
+- (void)showStatusBarProgress:(CGFloat)progress{
+    [JDStatusBarNotification showProgress:progress];
+    
+}
+- (void)hideStatusBarProgress{
+    [JDStatusBarNotification showProgress:0.0];
 }
 
 #pragma mark - BaseUrl
